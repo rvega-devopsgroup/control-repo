@@ -1,13 +1,12 @@
 class profile::users {
   user { 'student1':
     ensure => present,
-    groups => ['Users'],
+    groups => ['Users', 'Students'],
     password => 'student1',
     managehome => true,
   }
 
-/*   group { 'student1':
+   group { 'Students':
     ensure => present,
-    members => ['student1'],
-  } */
+  } 
 }
