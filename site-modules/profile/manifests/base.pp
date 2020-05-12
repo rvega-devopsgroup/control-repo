@@ -1,5 +1,5 @@
 class profile::base {
-  groups { 'student':
+  group { 'student':
     ensure => present,
   }
 
