@@ -5,4 +5,5 @@ class role::webserver {
   include profile::base
   include profile::users
   include profile::directory_permissions
+  include profile::registry
 }

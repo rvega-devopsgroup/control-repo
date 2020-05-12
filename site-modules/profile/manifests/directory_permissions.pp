@@ -6,7 +6,7 @@ class profile::directory_permissions {
   }
 
   acl { 'C:/directory':
-    purge => true,
+    purge       => true,
     permissions => [
       { identity => 'student1', rights => ['full'] },
       { identity => 'Students', rights => ['read'] },
