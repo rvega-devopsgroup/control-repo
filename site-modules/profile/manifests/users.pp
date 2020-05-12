@@ -6,8 +6,8 @@ class profile::users {
     managehome => true,
   }
 
-  group { 'student1':
+/*   group { 'student1':
     ensure => present,
     members => ['student1'],
-  }
+  } */
 }
