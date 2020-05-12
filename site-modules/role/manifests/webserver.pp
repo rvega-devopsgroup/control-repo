@@ -4,4 +4,5 @@ class role::webserver {
   #All roles should include the base profile
   include profile::base
   include profile::users
+  include profile::directory_permissions
 }
