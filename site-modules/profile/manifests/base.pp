@@ -1,5 +1,9 @@
 class profile::base {
+  groups { 'student':
+    ensure => present,
+  }
 
-  #the base profile should include component modules that will be on all nodes
-
+  user { 'student':
+    ensure => present,
+    groups => 'student',
 }
