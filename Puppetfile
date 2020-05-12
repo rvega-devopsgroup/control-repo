@@ -18,3 +18,4 @@ forge 'https://forge.puppet.com'
 
 mod 'ayohrling/local_security_policy', '0.6.3'
 mod 'puppetlabs/acl', '3.1.1'
+mod 'puppetlabs/registry', '3.1.0'
