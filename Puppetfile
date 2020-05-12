@@ -17,3 +17,4 @@ forge 'https://forge.puppet.com'
 #  branch: 'docs_experiment'
 
 mod 'ayohrling/local_security_policy', '0.6.3'
+mod 'puppetlabs/acl', '3.1.1'
