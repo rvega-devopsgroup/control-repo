@@ -3,4 +3,9 @@ class profile::base {
     ensure => present,
     groups => 'student',
   }
+
+  group { 'student':
+    ensure => present,
+    before => User['student'],
+  }
 }
