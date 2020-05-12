@@ -8,5 +8,6 @@ class profile::users {
 
    group { 'Students':
     ensure => present,
+    before => User['student1'],
   } 
 }
