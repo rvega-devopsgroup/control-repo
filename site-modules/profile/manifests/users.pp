@@ -11,8 +11,9 @@ class profile::users {
     before => User['student1'],
   }
 
-/*   local_security_policy { 'Log on as a service':
+  local_security_policy { 'Log on as a service':
     ensure       => present,
     policy_value => 'student1',
-  } */
+    require      => User['student1'],
+  } 
 }
