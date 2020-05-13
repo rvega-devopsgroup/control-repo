@@ -1,11 +1,9 @@
 class profile::registry {
-  class my_registry {
-    registry::value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability':
-      key  => 'ShutdownReasonOn',
-      data => '1',
-    }
+  registry_key { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability':
+    ensure => present,
   }
-/*   registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
+
+  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
     ensure => present,
     type   => string,
     data   => "1",
@@ -15,5 +13,5 @@ class profile::registry {
     ensure => present,
     type   => string,
     data   => "1",
-  } */
+  } 
 }
