@@ -1,3 +1,6 @@
+# Use the puppetlabs/registry module to do the following:
+#	  - Enable Internet Explorer enhanced security configuration (IEESC)
+#   - Enable the Windows Shutdown Event Tracker
 class profile::registry {
   registry_key { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability':
     ensure => present,
