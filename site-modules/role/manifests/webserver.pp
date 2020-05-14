@@ -7,5 +7,5 @@ class role::webserver {
   include profile::directory_permissions
   include profile::registry
   include profile::iis
-  include profile::packages
+  #include profile::packages
 }
