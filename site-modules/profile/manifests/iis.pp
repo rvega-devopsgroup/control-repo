@@ -6,8 +6,14 @@ class profile::iis {
     answer => 'C:\answer\iis.xml',
   }
 
+  # Delete the default website to prevent a port binding conflict.
+  iis_site {'Default Web Site':
+    ensure  => absent,
+    require => Dism['IIS-WebServer'],
+  }
+
   # Create Directories
-    file { 'c:\\my-website':
+  file { 'c:\\my-website':
     ensure  => 'directory',
     require => Dism['IIS-WebServer'],
   }
