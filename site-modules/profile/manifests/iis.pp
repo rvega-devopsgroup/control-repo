@@ -7,14 +7,19 @@ class profile::iis {
   }
 
   # Create Directories
-  file { 'c:\\my-website\\cats':
+    file { 'c:\\my-website':
     ensure  => 'directory',
     require => Dism['IIS-WebServer'],
   }
 
+  file { 'c:\\my-website\\cats':
+    ensure  => 'directory',
+    require => File['c:\\my-website'],
+  }
+
   file { 'c:\\my-website\\cats_vdir':
     ensure  => 'directory',
-    require => Dism['IIS-WebServer'],
+    require => File['c:\\my-website'],
   }
 
   file { 'c:\\my-website\\cats_vdir\\index.html':
