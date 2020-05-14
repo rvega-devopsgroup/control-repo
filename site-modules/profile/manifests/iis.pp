@@ -31,13 +31,13 @@ class profile::iis {
   # Set Permissions
   acl { 'c:\\my-website\\cats':
     permissions => [
-      {'identity' => 'IISCompleteGroup', 'rights' => ['read', 'execute']},
+      {'identity' => 'student1', 'rights' => ['read', 'execute']},
     ],
   }
 
   acl { 'c:\\my-website\\cats_vdir':
     permissions => [
-      {'identity' => 'IISCompleteGroup', 'rights' => ['read', 'execute']},
+      {'identity' => 'student1', 'rights' => ['read', 'execute']},
     ],
   }
 
