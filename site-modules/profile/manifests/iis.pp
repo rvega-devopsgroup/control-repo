@@ -22,11 +22,11 @@ class profile::iis {
     require => File['c:\\my-website'],
   }
 
-  file { 'c:\\my-website\\cats_vdir\\index.html':
-    ensure  => present,
-    content => 'I love cats',
-    require => File['c:\\my-website\\cats_vdir']
-  }
+  # file { 'c:\\my-website\\cats_vdir\\index.html':
+  #   ensure  => present,
+  #   content => 'I love cats',
+  #   require => File['c:\\my-website\\cats_vdir']
+  # }
 
   # Set Permissions
   acl { 'c:\\my-website\\cats':
