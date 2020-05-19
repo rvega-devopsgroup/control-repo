@@ -23,29 +23,34 @@ class profile::iis {
     require => File['c:\\my-website'],
   }
 
-  file { 'c:\\my-website\\cats_vdir':
-    ensure  => 'directory',
-    require => File['c:\\my-website'],
-  }
+  # file { 'c:\\my-website\\cats_vdir':
+  #   ensure  => 'directory',
+  #   require => File['c:\\my-website'],
+  # }
 
-  file { 'c:\\my-website\\cats_vdir\\index.html':
-    ensure  => present,
-    content => 'I love cats',
-    require => File['c:\\my-website\\cats_vdir']
+  # file { 'c:\\my-website\\cats_vdir\\index.html':
+  #   ensure  => present,
+  #   content => 'I love cats',
+  #   require => File['c:\\my-website\\cats_vdir']
+  # }
+  file { 'c:\\my-website\\cats\\index.html':
+     ensure  => present,
+     content => 'I love cats',
+     require => File['c:\\my-website\\cats']
   }
 
   # Set Permissions
-  acl { 'c:\\my-website\\cats':
-    permissions => [
-      {'identity' => 'student1', 'rights' => ['read', 'execute']},
-    ],
-  }
-
-  acl { 'c:\\my-website\\cats_vdir':
-    permissions => [
-      {'identity' => 'student1', 'rights' => ['read', 'execute']},
-    ],
-  }
+  # acl { 'c:\\my-website\\cats':
+  #   permissions => [
+  #     {'identity' => 'student1', 'rights' => ['read', 'execute']},
+  #   ],
+  # }
+  #
+  # acl { 'c:\\my-website\\cats_vdir':
+  #   permissions => [
+  #     {'identity' => 'student1', 'rights' => ['read', 'execute']},
+  #   ],
+  # }
 
   # Configure IIS
   iis_application_pool { 'cats_app_pool':
@@ -60,13 +65,13 @@ class profile::iis {
     physicalpath     => 'c:\\my-website\\cats',
     applicationpool  => 'cats_app_pool',
     enabledprotocols => 'http',
-    require          => File['c:\\my-website\\cats'],
+    require          => [ File['c:\\my-website\\cats'], Iis_application_pool['cats_app_pool'] ]
   }
 
-  iis_virtual_directory { 'vdir':
-    ensure       => 'present',
-    sitename     => 'complete',
-    physicalpath => 'c:\\my-website\\cats_vdir',
-    require      => File['c:\\my-website\\cats'],
-  }
+  # iis_virtual_directory { 'vdir':
+  #   ensure       => 'present',
+  #   sitename     => 'complete',
+  #   physicalpath => 'c:\\my-website\\cats_vdir',
+  #   require      => File['c:\\my-website\\cats'],
+  # }
 }
