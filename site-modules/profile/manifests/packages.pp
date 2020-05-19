@@ -3,4 +3,8 @@
 #   - Install 7-zip using chocolatey and the puppetlabs/chocolatey forge module
 class profile::packages {
   include 'archive'
+
+  package { '7zip':
+    ensure => 19.0,
+  }
 }
