@@ -11,8 +11,9 @@ class profile::packages {
   # }
   # Using Chocolatey - Evaluation Error: Error while evaluating a Resource Statement, Duplicate declaration: Package[7zip] is already declared
   package { '7zip':
-    ensure   => 19.00,
-    source   => 'https://www.7-zip.org/a/7z1900-x64.msi',
+    ensure     => '19.00',
+    provider   => 'chocolatey',
+    #source   => 'https://www.7-zip.org/a/7z1900-x64.msi',
   }
 
   # reboot { 'after':
