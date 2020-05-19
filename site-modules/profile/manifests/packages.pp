@@ -13,10 +13,9 @@ class profile::packages {
   package { '7zip 19.0':
     ensure     => installed,
     provider   => 'chocolatey',
-    #source   => 'https://www.7-zip.org/a/7z1900-x64.msi',
   }
 
-  # reboot { 'after':
-  #   subscribe   => Package['7zip'],
-  # }
+  reboot { 'after':
+    subscribe   => Package['7zip 19.0'],
+  }
 }
