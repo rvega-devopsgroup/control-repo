@@ -24,9 +24,9 @@ class profile::iis {
   }
 
   file { 'c:\\my-website\\cats\\index.html':
-     ensure  => present,
-     content => 'I love cats',
-     require => File['c:\\my-website\\cats']
+    ensure  => present,
+    content => 'I love cats',
+    require => File['c:\\my-website\\cats']
   }
 
   # Configure IIS
