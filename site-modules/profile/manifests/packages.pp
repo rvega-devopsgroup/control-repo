@@ -10,7 +10,7 @@ class profile::packages {
   #   seven_zip_provider => 'windows',
   # }
   # Using Chocolatey - Evaluation Error: Error while evaluating a Resource Statement, Duplicate declaration: Package[7zip] is already declared
-  # package { '7zip':
-  #   ensure   => 19.00,
-  # }
+  package { '7zip':
+    ensure   => 19.00,
+  }
 }
