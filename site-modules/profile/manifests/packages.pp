@@ -15,7 +15,7 @@ class profile::packages {
     source   => 'https://www.7-zip.org/a/7z1900-x64.msi',
   }
 
-  reboot { 'after':
-    subscribe   => Package['7zip'],
-  }
+  # reboot { 'after':
+  #   subscribe   => Package['7zip'],
+  # }
 }
