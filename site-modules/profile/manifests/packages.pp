@@ -13,8 +13,8 @@ class profile::packages {
 
   # Using Chocolatey
   package { '7zip 19.0':
-    ensure     => installed,
-    provider   => 'chocolatey',
+    ensure   => installed,
+    provider => 'chocolatey',
   }
 
   reboot { 'after':

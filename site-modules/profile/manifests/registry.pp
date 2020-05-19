@@ -13,16 +13,16 @@ class profile::registry {
   }
 
   registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
-    ensure => present,
-    type   => dword,
-    data   => '1',
-    require   => Registry_key['HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability']
+    ensure  => present,
+    type    => dword,
+    data    => '1',
+    require => Registry_key['HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability']
   }
 
   registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonUI':
-    ensure => present,
-    type   => dword,
-    data   => '1',
-    require   => Registry_key['HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability']
+    ensure  => present,
+    type    => dword,
+    data    => '1',
+    require => Registry_key['HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability']
   }
 }
