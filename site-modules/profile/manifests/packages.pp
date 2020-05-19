@@ -2,8 +2,9 @@
 #	  - Install 7-zip using the puppet/staging archive module - depreciated module use puppet/archive instead
 #   - Install 7-zip using chocolatey and the puppetlabs/chocolatey forge module
 class profile::packages {
-  #include 'archive'
-  package { '7zip':
-    ensure => 19.0,
-  }
+  include 'archive'
+  include 'chocolatey'
+  # package { '7zip':
+  #   ensure => latest,
+  # }
 }
