@@ -25,3 +25,4 @@ mod 'puppetlabs/iis', '7.0.1'
 mod 'puppetlabs/pwshlib', '0.4.1'
 mod 'puppet/archive', '4.5.0'
 mod 'puppetlabs/chocolatey', '5.0.2'
+mod 'puppetlabs/reboot', 3.0.0
