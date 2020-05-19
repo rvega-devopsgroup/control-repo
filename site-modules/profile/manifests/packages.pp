@@ -7,8 +7,4 @@ class profile::packages {
     seven_zip_source   => 'https://www.7-zip.org/a/7z1900-x64.msi',
     seven_zip_provider => 'windows',
   }
-  # download_file { "Download 7zip" :
-  #   url                   => 'https://www.7-zip.org/a/7z1900-x64.msi',
-  #   destination_directory => 'c:\Windows\Temp'
-  # }
 }
