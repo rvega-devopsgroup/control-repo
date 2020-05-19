@@ -18,7 +18,7 @@ class profile::users {
 
   local_security_policy { 'Log on as a service':
     ensure       => present,
-    policy_value => 'student1',
+    policy_value => 'DOMAIN\student1',
     require      => User['student1'],
   }
 }
