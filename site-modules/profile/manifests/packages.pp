@@ -13,9 +13,10 @@ class profile::packages {
   package { '7zip':
     ensure   => 19.00,
     source   => 'https://www.7-zip.org/a/7z1900-x64.msi',
+    notify   => Reboot['after_run'],
   }
 
-  reboot { 'after':
-    subscribe => Package['7zip'],
+  reboot { 'after_run':
+    apply     => finished,
   }
 }
