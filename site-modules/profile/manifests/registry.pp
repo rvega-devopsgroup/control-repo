@@ -17,6 +17,12 @@ class profile::registry {
   #   type   => string,
   #   data   => '1',
   # }
+  registry_value { 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability\ShutdownReasonOn':
+    ensure   => present,
+    type     => dword,
+    data     => '1',
+  }
+
   registry_value { 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability\ShutdownReasonUI':
     ensure   => present,
     type     => dword,
