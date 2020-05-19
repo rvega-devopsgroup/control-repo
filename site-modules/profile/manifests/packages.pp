@@ -4,12 +4,14 @@
 class profile::packages {
   include chocolatey
 
+  # commenting this out in order to use chocolatey
   # class { 'archive':
   #   seven_zip_name     => '7-Zip 19.00 (x64 edition)',
   #   seven_zip_source   => 'https://www.7-zip.org/a/7z1900-x64.msi',
   #   seven_zip_provider => 'windows',
   # }
-  # Using Chocolatey - Evaluation Error: Error while evaluating a Resource Statement, Duplicate declaration: Package[7zip] is already declared
+
+  # Using Chocolatey
   package { '7zip 19.0':
     ensure     => installed,
     provider   => 'chocolatey',
