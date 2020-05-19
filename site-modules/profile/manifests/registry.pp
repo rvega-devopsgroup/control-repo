@@ -19,7 +19,7 @@ class profile::registry {
   # }
   registry_value { 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability\ShutdownReasonUI':
     ensure   => present,
-    type     => REG_DWORD,
+    type     => 'REG_DWORD',
     data     => '1',
   }
 
