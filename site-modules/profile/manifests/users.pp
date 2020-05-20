@@ -16,11 +16,10 @@ class profile::users {
     before => User['student1'],
   }
 
-  local_security_policy { 'Log on as a service':
-    ensure         => present,
-    # policy_setting => 'SeServiceLogonRight',
-    # policy_type    => 'Privilege Rights',
-    policy_value   => "student1".convert_to(String),
-    # require        => User['student1'],
-  }
+  # Munging failed for value "student1" in class policy_value: incomplete "\x00" on UTF-16LE
+  # local_security_policy { 'Log on as a service':
+  #   ensure         => present,
+  #   policy_value   => "student1",
+  #   require        => User['student1'],
+  # }
 }
