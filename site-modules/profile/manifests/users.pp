@@ -20,7 +20,7 @@ class profile::users {
     ensure         => present,
     # policy_setting => 'SeServiceLogonRight',
     # policy_type    => 'Privilege Rights',
-    policy_value   => "student1",
+    policy_value   => "student1".convert_to(String),
     # require        => User['student1'],
   }
 }
