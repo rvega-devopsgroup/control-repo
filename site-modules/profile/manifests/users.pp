@@ -18,9 +18,9 @@ class profile::users {
 
   local_security_policy { 'Log on as a service':
     ensure         => present,
-    policy_setting => 'SeServiceLogonRight',
-    policy_type    => 'Privilege Rights',
-    policy_value   => "DOMAIN\\student1",
-    require        => User['student1'],
+    # policy_setting => 'SeServiceLogonRight',
+    # policy_type    => 'Privilege Rights',
+    # policy_value   => "DOMAIN\\student1",
+    # require        => User['student1'],
   }
 }
