@@ -16,6 +16,7 @@ class profile::account (
   String $username,
   String $group,
   String $password,
+  String $home_dir,
 ) {
   user { $username:
     ensure     => present,
@@ -36,17 +37,17 @@ class profile::account (
   #   require        => User['student1'],
   # }
 
-  file { 'C:/directory':
+  file { $home_dir:
     ensure => 'directory',
-    owner  => 'student1',
-    group  => 'Students',
+    owner  => $username,
+    group  => $group,
   }
 
-  acl { 'C:/directory':
+  acl { $home_dir:
     purge       => true,
     permissions => [
-      { identity => 'student1', rights => ['full'] },
-      { identity => 'Students', rights => ['read'] },
+      { identity => $username, rights => ['full'] },
+      { identity => $group, rights => ['read'] },
     ],
   }
 
