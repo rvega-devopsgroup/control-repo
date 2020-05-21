@@ -13,16 +13,18 @@
 #		  - Grant the local user Full Control
 #     - Grant the local group Read Only permissions
 class profile::account (
-  String $username,
+  String    $username,
+  String    $group,
+  Sensitive $password,
 ) {
   user { $username:
     ensure     => present,
-    groups     => ['Users', 'Students'],
-    password   => '2Yz@1A!H3JkPJR9yzMcxUwpO',
+    groups     => ['Users', $group],
+    password   => $password,
     managehome => true,
   }
 
-  group { 'Students':
+  group { $group:
     ensure => present,
     before => User[$username],
   }
