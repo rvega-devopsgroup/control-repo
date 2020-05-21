@@ -13,9 +13,9 @@
 #		  - Grant the local user Full Control
 #     - Grant the local group Read Only permissions
 class profile::account (
-  String    $username,
-  String    $group,
-  Sensitive $password,
+  String $username,
+  String $group,
+  String $password,
 ) {
   user { $username:
     ensure     => present,
