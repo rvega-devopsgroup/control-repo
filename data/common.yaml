@@ -1,5 +1,5 @@
 ---
 profile::account::username: 'student1'
 profile::account::group: 'Students'
-profile::account::password: 'mytemppassword123!!ASDF'
+profile::account::password: 'ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAw9fQeUkl9dm5i5EZNOm46qLW7GnM3Jm09AmodQwv6XzULbqThm9jGFvcPBvxHbMW4W5No0bhpqHqufkwtFuT5ODWkH5eUhn+yycZBdA0C7suBm8Ml95OKjvtuX9Vv6zHIGnEdRrjB3vAbvrwOvh6xEFkbZKAIvLmDRF64x/ci/DgN9/A9CinBK2hbKIC0xkh3m+lfh64A8JGfxko4diNUV5MWdqWSXJep7fvfNmBejS+AVSVRZmD+aaglB7pFSSkZyWgbGkq6XkVJ5SvBtH9NvHriSiV10bsj3iHjQbyLtdkcvTn7gWBEPc4IQC4G4xo3Ifi+lhQt9t5dV5zx+d5YzBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD0PC7aBOz2HJI9Y0iJW8k7gCAsRv7X95bRzNK7WGmjR6vUvmuUt9IkZ0I5DWBYu5oMzw==]'
 profile::account::home_dir: 'C:/directory'
