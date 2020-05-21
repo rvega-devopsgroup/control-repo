@@ -5,12 +5,6 @@ defaults:
   datadir: "data"
 
 hierarchy:
-#  - name: "Yaml backend"
-#    data_hash: yaml_data
-#    paths:
-#      - "nodes/%{trusted.certname}.yaml"
-#      - "environments/%{environment}.yaml"
-#      - "common.yaml"
   - name: "Eyaml backend"
     lookup_key: eyaml_lookup_key
     paths:
