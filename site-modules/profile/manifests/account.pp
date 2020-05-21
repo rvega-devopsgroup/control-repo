@@ -30,11 +30,11 @@ class profile::account (
     before => User[$username],
   }
 
-  # Munging failed for value "student1" in class policy_value: incomplete "\x00" on UTF-16LE
+  # I suspect this error might be due to a Windows incompatibility, I cannot figure it out. Munging failed for value "student1" in class policy_value: incomplete "\x00" on UTF-16LE
   # local_security_policy { 'Log on as a service':
   #   ensure         => present,
-  #   policy_value   => "student1",
-  #   require        => User['student1'],
+  #   policy_value   => $username,
+  #   require        => User[$username],
   # }
 
   file { $home_dir:
