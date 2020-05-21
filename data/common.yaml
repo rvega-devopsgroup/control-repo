@@ -1,1 +1,4 @@
 ---
+profile::users::username: 'student1'
+profile::users::group: 'Students'
+profile::users::password: 'mytemppassword123!!ASDF'
