@@ -1,4 +1,4 @@
 ---
-profile::users::username: 'student1'
-profile::users::group: 'Students'
-profile::users::password: 'mytemppassword123!!ASDF'
+profile::account::username: 'student1'
+profile::account::group: 'Students'
+profile::account::password: 'mytemppassword123!!ASDF'
