@@ -1,7 +1,9 @@
 # Package Management
 #	  - Install 7-zip using the puppet/staging archive module - depreciated module use puppet/archive instead
 #   - Install 7-zip using chocolatey and the puppetlabs/chocolatey forge module
-class profile::packages {
+class profile::packages (
+  Array $common_packages = undef,
+){
   include chocolatey
 
   # commenting this out in order to use chocolatey
@@ -12,12 +14,12 @@ class profile::packages {
   # }
 
   # Using Chocolatey
-  package { '7zip 19.0':
+  package { $common_packages:
     ensure   => installed,
     provider => 'chocolatey',
   }
 
   reboot { 'after':
-    subscribe   => Package['7zip 19.0'],
+    subscribe   => Package[$common_packages],
   }
 }
