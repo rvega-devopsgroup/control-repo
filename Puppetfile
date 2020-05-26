@@ -30,7 +30,6 @@ mod 'puppetlabs/reboot', '3.0.0'
 
 # CD4PE
 mod 'puppetlabs-cd4pe', '2.0.0'
-mod 'puppetlabs-stdlib', '6.3.0'
 mod 'puppetlabs-puppet_authorization', '0.5.1'
 mod 'puppetlabs-hocon', '1.1.0'
 mod 'puppetlabs-concat', '6.2.0'
